@@ -4,6 +4,7 @@ import { notFound, redirect } from "next/navigation";
 
 async function SyncUser() {
     const { userId } = await auth();
+    console.log(userId + " sync-user ");
     if(!userId){
         throw new Error('User not found');
     }

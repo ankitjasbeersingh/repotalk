@@ -6,6 +6,7 @@ import {Inter} from "next/font/google";
 import localFont from 'next/font/local';
 
 import { TRPCReactProvider } from "@/trpc/react";
+import { Toaster } from "sonner";
 
 export const metadata: Metadata = {
   title: "Repotalk",
@@ -31,6 +32,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <TRPCReactProvider>{children}</TRPCReactProvider>
+        <Toaster richColors/>
       </body>
     </html>
     </ClerkProvider>
